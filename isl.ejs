@@ -1,0 +1,152 @@
+<html>
+<head>
+<style>
+
+@media print {
+  footer {page-break-after: always;}
+}
+
+
+.modal-xl {
+    margin-left: auto !important;
+    margin-right: auto !important;
+background-color:blue;
+    
+}
+
+body:{
+ 
+  font-size:12px;
+  font-family: Calibri;
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  height:100px;
+  padding-top:30px;
+}
+.left {
+  position: absolute;
+  left: 0px;
+  height:80px;
+  margin-left: 100px;
+}
+
+p{
+font-size:12px;
+}
+
+.header{
+height:120px;
+}
+
+.data{
+align:left;
+position:relative;
+}
+
+.footer {
+bottom:0px;
+}
+
+ol{
+font-size:12px;
+}
+li{
+font-size:12px;
+}
+
+td {
+padding:5px;
+}
+</style>
+
+</head>
+<body align="left" style=" margin-top: 20px;  margin-bottom: 10px;  margin-right: 100px;  margin-left: 100px;">
+
+<div class=" ">
+<div class="header">
+<img src="https://mlslxw0xad5d.i.optimole.com/uSNfBEo-5YLb7mqp/w:auto/h:auto/q:90/https://samunnati.com/wp-content/uploads/2021/05/Samunnati-logo-with-Registered.png" class="left"/>
+<div class="right">
+  <% 
+  var dt = new Date();
+ 
+  year = dt.getFullYear() 
+  month = dt.getMonth() + 1
+  monthname = dt.toLocaleString('default', { month: 'short'});
+  day = dt.getDate();
+ 
+  %>
+<p>Ref : <%=data.applicationref %></p>
+<p>Date: <%= day %>/<%= month %> / <%= year %> </p>
+</div>
+</div>
+
+</div>
+
+<div class="data" style="align:left;font-size:12px;margin-top:10px;">
+<p>To, </p>
+<b>M/S. <%= data.company_name %> </b>
+<p style="width:40%">Address<br><%= data.address %></p>
+<br>Contact Name  : <strong><%= data.contact_name %></strong>
+<br>Contact Number: <strong><%= data.mobile %></strong>
+<br>Contact Email : <strong><%= data.company_email %></strong>
+<p>Dear Sir/Madam,</p>
+</div>
+<div align="center">
+<u>In-Principle Approval Working Capital Facilities to the extent of INR <%= data.questionnaire.loan_amount %> lakhs </u>
+</div>
+<div align="">
+	<p>
+The intent of this document is to describe, for negotiation purposes only, some key terms of the proposed 
+Working Capital Facilities between Samunnati Financial Intermediation & Services Private Limited 
+		 (“Samunnati”) and <%= data.company_name %> (“Borrower”). 
+		 The obligations of all parties to this in principle Approval and as outlined in this document are subject to satisfactory completion of due diligence, reference checks, and internal approvals of respective parties and execution of appropriate documentation as prescribed by Samunnati. Terms of discussion is to include, without limiting the generality of the foregoing, the following: 
+	</p>
+	<table border="1" style="border-collapse: collapse;font-size:12px">
+<tr><td>	Facilities:	</td><td>	Samunnati, at its sole discretion and subject to necessary approvals, proposes to extend 
+   
+  <% if (data.questionnaire.loan_purpose.indexOf('equipment') > -1 ) { %>
+    term loan
+ <% } else { %>
+  working capital limits
+ <% } %> 
+  to the extent of INR <%= data.questionnaire.loan_amount %> Lakhs to the Borrower.	</td></tr>
+<tr><td>	Purpose: 	</td><td>	<%= data.questionnaire.loan_purpose %> </td></tr>
+<tr><td>	Tenure: 	</td><td>	<%= data.questionnaire.loan_tenure %> months </td></tr>
+<tr><td>	Interest: 	</td><td>	14%	p.a.</td></tr>
+<tr><td>	Processing Fees:	</td><td>	1% + Applicable Tax	</td></tr>
+<tr><td>	Repayment:	</td><td>	
+	<% if (data.questionnaire.loan_purpose.indexOf('equipment') > -1 ) { %>
+    Equated Monthly Installment
+ <% } else { %>
+   Interest payable monthly, principal at end of the tenure
+ <% } %>  
+</td></tr>
+<tr><td>	Validity of Limits:	</td><td>	12 Months.	</td></tr>
+<tr><td>	Personal Guarantee	</td>
+  <td>	
+  <% for (dir of data.directors) { %>
+    <%  if (dir.liability=="1") { %>
+      <b><%= dir.full_name %></b> <br>
+  <% } } %>  
+  </td>
+</tr>
+</table>
+<div align="center">
+  This is computer generated letter and does not require any signature.  
+</div>
+</div>
+ 
+ 
+
+<br>
+
+
+
+</body>
+
+
+
+</html>

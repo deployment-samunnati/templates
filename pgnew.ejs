@@ -1,0 +1,785 @@
+
+<html>
+	<head>
+	<style>
+	
+	@media print {
+	  footer {page-break-after: always;}
+	}
+	
+	
+	.modal-xl {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	background-color:blue;
+		
+	}
+	
+	body{
+	 
+	  font-size:12px;
+	  font-family: Calibri;
+	}
+	.right {
+	  position: absolute;
+	  right: 0px;
+	  width: 300px;
+	  height:100px;
+	  padding-top:30px;
+	}
+	.left {
+	  position: absolute;
+	  left: 0px;
+	  height:80px;
+	  top:20px;
+	  margin-left: 100px;
+	}
+	
+	p{
+	font-size:12px;
+	padding:5px;
+	}
+	
+	.header{
+	height:120px;
+	}
+	
+	.data{
+	text-align:left;
+	position:relative;
+	}
+	
+	.footer {
+	bottom:0px;
+	}
+	
+	ol{
+	font-size:12px;
+	}
+	li{
+	font-size:12px;
+	padding:5px;
+	}
+	
+	td {
+	padding:5px;
+	}
+	</style>
+	
+	</head>
+	<% 
+	var dt = new Date();
+   
+	year = dt.getFullYear() 
+	month = dt.getMonth() + 1
+	monthname = dt.toLocaleString('default', { month: 'short'});
+	day = dt.getDate();
+    
+	%>
+
+	<%   dirlist=['','','','','']; i = 0;
+       for (dir of data.directors) { %>
+		<%  if (dir.liability=="1") { 
+            dirlist[i]={
+                'name':dir.full_name,
+                'mobile':dir.mobile,
+                'address':dir.address
+            }
+
+            i =  i + 1;
+            %>
+	  <% } } %>
+
+<body align="left" style="text-align: justify; margin-top: 20px;  margin-bottom: 10px;  margin-right: 100px;  margin-left: 100px;">
+
+    <div style="margin-top:300px"></div>
+    <div style="text-align: center;"><b>UNCONDITIONAL AND IRREVOCABLE PERSONAL GUARANTEE</b></div>
+    <p>This unconditional and irrevocable personal guarantee (<b>"Personal Guarantee"</b>) is made 
+        and executed on the day, month and year set out in SCHEDULE 1 (“Effective Date”) at the
+         place mentioned in SCHEDULE 1</p>
+        
+    <p><b>BY</b></p>
+    <p><b>THE PERSON NAMED IN SCHEDULE 1 AS THE GUARANTOR</b> (hereinafter referred to as the <b>"Guarantor"</b>, which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include his / her heirs,
+         successors, administrators and permitted assigns);</p>
+    <p><b>In favour of</b></p>
+    <p><b>SAMUNNATI FINANCIAL INTERMEDIATION & SERVICES PRIVATE LIMITED</b>, a company incorporated
+        under the Companies Act, 2013 and a non-banking financial company registered with the RBI,
+        having its registered office at Baid Hi Tech Park, 8th Floor, No. 129 B,
+        East Coast Road, Thiruvanmiyur, Chennai - 600041 (hereinafter referred to as the <b>"Lender"</b> 
+        which expression shall, unless it be repugnant to the context or meaning thereof, 
+        be deemed to mean and include its successors, representatives and permitted assigns).
+    </p>
+    <p><b>IN PRESENCE OF</b></p>
+    <p><b>THE PERSON(S) NAMED IN SCHEDULE 1 AS THE 'BORROWER'</b> (hereinafter referred to as the
+        'BORROWER' which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include
+         its successors, representatives and permitted assigns).
+    </p>
+    <p>The Guarantor, the Lender and the Borrower are hereinafter referred to, individually as a <b>“Party”</b>
+         and collectively as the <b>"Parties"</b>, as the context may so require.</p>
+    <p><b>WHEREAS:</b></p>
+    <ol>
+        <li>
+            The Lender and the Borrower have entered into a facility agreement on the Effective Date (“Facility Agreement”), under which the Lender has agreed 
+            to provide the Facility to the Borrower for the Purpose. 
+        </li>
+        <li>
+            As consideration for the Outstanding Amounts under the Facility Agreement, the Guarantor, at the request of the Borrower, has agreed to execute this Personal Guarantee in favour of the
+             Lender on the terms and in the manner hereinafter appearing.
+        </li>
+    
+        
+    </ol>
+    
+    <p><b>NOW, THIS PERSONAL GUARANTEE WITNESSETH AS FOLLOWS:</b></p>
+    <p>The Guarantor hereby unconditionally, absolutely and irrevocably guarantees
+         and agrees with the Lender as follows:</p>
+    <ol>
+        <li>All capitalized terms used and not defined in this Personal Guarantee shall have the meanings ascribed to them in the Facility Agreement. Clause 1.2 of the Facility Agreement applies to this Personal Guarantee as if the provisions thereof have been
+             expressly set out mutatis mutandis in this Personal Guarantee.</li>
+        <li>Upon the occurrence of an Event of Default which has not been remedied by the Borrower within the applicable Cure Period, the Guarantor shall, within 10 (ten) days from the receipt of a written demand being made by the Lender, pay to the Lender, without demur, such sum as specified by the Lender so as to discharge and satisfy the Outstanding
+             Amounts as may be due to the Lender under the Definitive Agreements. </li>
+        <li>This Personal Guarantee shall be unconditional, irrevocable and enforceable against the Guarantor. To give effect to this Personal Guarantee, the Lender may act as though the
+             Guarantor is the principal debtor of the Lender.</li>
+        <li>This Personal Guarantee shall be a continuing one and shall not be wholly or partially satisfied or exhausted by any payments made to or settled with the Lender by the Guarantor and shall be valid and binding on the Guarantor and shall remain in full force and effect until full payment of all the Outstanding Amounts under the Definitive Agreements to the satisfaction of the Lender, notwithstanding any dispute between the Lender and the
+             Borrower in respect of any of the Definitive Agreements.</li>
+        <li>The liability of the Guarantor under this Personal Guarantee shall not be affected by:
+            <ul>
+                (i)	Any change in the constitution or winding up/insolvency of the Borrower; <br>
+                (ii) Any change in the constitution of the Lender.
+    
+            </ul>
+    
+        </li>
+    
+       
+    
+        <li>The Lender shall enforce this Personal Guarantee by sending a notice
+             to the Guarantor’s address and email set out in Schedule 1, which notice shall 
+             be sufficient demand on the Guarantor. In the event that the Guarantor refuses delivery or acceptance of a notice, request or other communication, under this Personal Guarantee, it shall be deemed that the notice was given upon proof of the refused delivery, provided the same was sent in the manner specified herein.
+        </li>
+        <li>The Guarantor hereby indemnifies and agrees to keep the Lender,
+             its representatives and affiliates, indemnified from and against all Losses, damages, costs including legal costs, claims and expenses whatsoever which the Lender may suffer, pay or incur by reason of or in connection with the transactions contemplated by the Definitive Agreements.
+        </li>
+        <li>The Guarantor hereby agrees and gives consent for the disclosure 
+            and publishing by the Lender of all or any information and data relating to the Guarantor to CIBIL and/or any other agency authorized in this behalf by the RBI.
+        </li>
+        <li>Clause 12 of the Facility Agreement shall apply <i>mutatis mutandis</i> to this Personal Guarantee. </li>
+    </ol>
+    
+    <footer class="footer"></footer>
+    <div style="text-align: center;"><b>SCHEDULE 1 <br>
+        DETAILS OF GUARANTOR AND BORROWER</b>
+        
+    
+    <table border="1" style="border-collapse: collapse;width:100%">
+    <tr><thead><td>Sl. No.</td><td>Title</td><td>Details</td></thead></tr>
+    <tr><td>1.</td><td>Place of execution</td><td></td></tr>
+    <tr><td>2.</td><td>Effective Date</td><td></td></tr>
+    <tr><td>3.</td><td>Name of Guarantor</td><td>
+       
+        <%= dirlist[0].name %>
+       
+    </td></tr>
+    <tr><td>4.</td><td>Contact Details of Guarantor</td><td>  <%= dirlist[0].mobile %>, <%= dirlist[0].address %></td></tr>
+    <tr><td>5.</td><td>Name(s) of borrower(s) </td><td><%= data.company_name %></td></tr>
+    <tr><td>6.</td><td>Sanction Letter reference No. and date </td><td><%= data.applicationref %>   <%= day %>/<%= month %>/<%= year %> </td></tr>
+    </tr>
+    
+    
+    </table></div>
+    <br>
+    
+    <p><b>IN WITNESS WHEREOF,</b> the Parties have executed these presents the day and year first hereinabove written.<br>
+    
+        <b>SIGNED AND DELIVERED</b> by the within named Guarantor
+    </p>
+    
+    <div style="display: flex;">
+        <div style="flex: 1;">
+            <b>_________________<br>
+                Signed and delivered on behalf of the Lender
+            </b>
+            <p>___________________________ <br><br>
+    
+                Name: ______________________________ <br><br>
+                
+                Title: Authorised Signatory<br>
+                </p>
+            <b>Signed and delivered on behalf of the Borrower</b><br>
+            <p>___________________________ <br><br>
+    
+                Name: ______________________________ <br><br>
+                
+                Title: Authorised Signatory<br>
+                </p><br>
+                <p><b>WITNESSED BY </b><br>
+    
+    
+                    _______________________ <br>
+                    Name:<br>
+                    
+                    
+                    _______________________ <br>
+                    Name:<br>
+                    </p>
+        </div>
+    
+        
+    </div>
+    </div>
+
+    <footer class="footer"></footer>
+    <!-- ### G 1 ######### -->
+    
+    <div>
+        <div style="margin-top:300px"></div>
+        <div style="text-align: center;"><b>UNCONDITIONAL AND IRREVOCABLE PERSONAL GUARANTEE</b></div>
+        <p>This unconditional and irrevocable personal guarantee (<b>"Personal Guarantee"</b>) is made 
+            and executed on the day, month and year set out in SCHEDULE 1 (“Effective Date”) at the
+             place mentioned in SCHEDULE 1</p>
+            
+        <p><b>BY</b></p>
+        <p><b>THE PERSON NAMED IN SCHEDULE 1 AS THE GUARANTOR</b> (hereinafter referred to as the <b>"Guarantor"</b>, which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include his / her heirs,
+             successors, administrators and permitted assigns);</p>
+        <p><b>In favour of</b></p>
+        <p><b>SAMUNNATI FINANCIAL INTERMEDIATION & SERVICES PRIVATE LIMITED</b>, a company incorporated
+            under the Companies Act, 2013 and a non-banking financial company registered with the RBI,
+            having its registered office at Baid Hi Tech Park, 8th Floor, No. 129 B,
+            East Coast Road, Thiruvanmiyur, Chennai - 600041 (hereinafter referred to as the <b>"Lender"</b> 
+            which expression shall, unless it be repugnant to the context or meaning thereof, 
+            be deemed to mean and include its successors, representatives and permitted assigns).
+        </p>
+        <p><b>IN PRESENCE OF</b></p>
+        <p><b>THE PERSON(S) NAMED IN SCHEDULE 1 AS THE 'BORROWER'</b> (hereinafter referred to as the
+            'BORROWER' which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include
+             its successors, representatives and permitted assigns).
+        </p>
+        <p>The Guarantor, the Lender and the Borrower are hereinafter referred to, individually as a <b>“Party”</b>
+             and collectively as the <b>"Parties"</b>, as the context may so require.</p>
+        <p><b>WHEREAS:</b></p>
+        <ol>
+            <li>
+                The Lender and the Borrower have entered into a facility agreement on the Effective Date (“Facility Agreement”), under which the Lender has agreed 
+                to provide the Facility to the Borrower for the Purpose. 
+            </li>
+            <li>
+                As consideration for the Outstanding Amounts under the Facility Agreement, the Guarantor, at the request of the Borrower, has agreed to execute this Personal Guarantee in favour of the
+                 Lender on the terms and in the manner hereinafter appearing.
+            </li>
+        
+            
+        </ol>
+        
+        <p><b>NOW, THIS PERSONAL GUARANTEE WITNESSETH AS FOLLOWS:</b></p>
+        <p>The Guarantor hereby unconditionally, absolutely and irrevocably guarantees
+             and agrees with the Lender as follows:</p>
+        <ol>
+            <li>All capitalized terms used and not defined in this Personal Guarantee shall have the meanings ascribed to them in the Facility Agreement. Clause 1.2 of the Facility Agreement applies to this Personal Guarantee as if the provisions thereof have been
+                 expressly set out mutatis mutandis in this Personal Guarantee.</li>
+            <li>Upon the occurrence of an Event of Default which has not been remedied by the Borrower within the applicable Cure Period, the Guarantor shall, within 10 (ten) days from the receipt of a written demand being made by the Lender, pay to the Lender, without demur, such sum as specified by the Lender so as to discharge and satisfy the Outstanding
+                 Amounts as may be due to the Lender under the Definitive Agreements. </li>
+            <li>This Personal Guarantee shall be unconditional, irrevocable and enforceable against the Guarantor. To give effect to this Personal Guarantee, the Lender may act as though the
+                 Guarantor is the principal debtor of the Lender.</li>
+            <li>This Personal Guarantee shall be a continuing one and shall not be wholly or partially satisfied or exhausted by any payments made to or settled with the Lender by the Guarantor and shall be valid and binding on the Guarantor and shall remain in full force and effect until full payment of all the Outstanding Amounts under the Definitive Agreements to the satisfaction of the Lender, notwithstanding any dispute between the Lender and the
+                 Borrower in respect of any of the Definitive Agreements.</li>
+            <li>The liability of the Guarantor under this Personal Guarantee shall not be affected by:
+                <ul>
+                    (i)	Any change in the constitution or winding up/insolvency of the Borrower; <br>
+                    (ii) Any change in the constitution of the Lender.
+        
+                </ul>
+        
+            </li>
+        
+           
+        
+            <li>The Lender shall enforce this Personal Guarantee by sending a notice
+                 to the Guarantor’s address and email set out in Schedule 1, which notice shall 
+                 be sufficient demand on the Guarantor. In the event that the Guarantor refuses delivery or acceptance of a notice, request or other communication, under this Personal Guarantee, it shall be deemed that the notice was given upon proof of the refused delivery, provided the same was sent in the manner specified herein.
+            </li>
+            <li>The Guarantor hereby indemnifies and agrees to keep the Lender,
+                 its representatives and affiliates, indemnified from and against all Losses, damages, costs including legal costs, claims and expenses whatsoever which the Lender may suffer, pay or incur by reason of or in connection with the transactions contemplated by the Definitive Agreements.
+            </li>
+            <li>The Guarantor hereby agrees and gives consent for the disclosure 
+                and publishing by the Lender of all or any information and data relating to the Guarantor to CIBIL and/or any other agency authorized in this behalf by the RBI.
+            </li>
+            <li>Clause 12 of the Facility Agreement shall apply <i>mutatis mutandis</i> to this Personal Guarantee. </li>
+        </ol>
+        
+        <footer class="footer"></footer>
+        <div style="text-align: center;"><b>SCHEDULE 1 <br>
+            DETAILS OF GUARANTOR AND BORROWER</b>
+            
+        
+        <table border="1" style="border-collapse: collapse;width:100%">
+        <tr><thead><td>Sl. No.</td><td>Title</td><td>Details</td></thead></tr>
+        <tr><td>1.</td><td>Place of execution</td><td></td></tr>
+        <tr><td>2.</td><td>Effective Date</td><td></td></tr>
+        <tr><td>3.</td><td>Name of Guarantor</td><td>
+            <%= dirlist[1].name %>
+        
+        </td></tr>
+        <tr><td>4.</td><td>Contact Details of Guarantor</td><td><%= dirlist[1].mobile %>, <%= dirlist[1].address %></td></tr>
+        <tr><td>5.</td><td>Name(s) of borrower(s) </td><td><%= data.company_name %></td></tr>
+        <tr><td>6.</td><td>Sanction Letter reference No. and date </td><td><%= data.applicationref %>   <%= day %>/<%= month %>/<%= year %></td></tr>
+        </tr>
+        
+        
+        </table></div>
+        <br>
+        
+        <p><b>IN WITNESS WHEREOF,</b> the Parties have executed these presents the day and year first hereinabove written.<br>
+        
+            <b>SIGNED AND DELIVERED</b> by the within named Guarantor
+        </p>
+        
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <b>_________________<br>
+                    Signed and delivered on behalf of the Lender
+                </b>
+                <p>___________________________ <br><br>
+        
+                    Name: ______________________________ <br><br>
+                    
+                    Title: Authorised Signatory<br>
+                    </p>
+                <b>Signed and delivered on behalf of the Borrower</b><br>
+                <p>___________________________ <br><br>
+        
+                    Name: ______________________________ <br><br>
+                    
+                    Title: Authorised Signatory<br>
+                    </p><br>
+                    <p><b>WITNESSED BY </b><br>
+        
+        
+                        _______________________ <br>
+                        Name:<br>
+                        
+                        
+                        _______________________ <br>
+                        Name:<br>
+                        </p>
+            </div>
+        
+            
+        </div>
+        </div>
+    
+        <footer class="footer"></footer>
+        <!-- ### G 1 ######### -->
+        <div style="margin-top:300px"></div>
+        <div>
+            <div style="text-align: center;"><b>UNCONDITIONAL AND IRREVOCABLE PERSONAL GUARANTEE</b></div>
+            <p>This unconditional and irrevocable personal guarantee (<b>"Personal Guarantee"</b>) is made 
+                and executed on the day, month and year set out in SCHEDULE 1 (“Effective Date”) at the
+                 place mentioned in SCHEDULE 1</p>
+                
+            <p><b>BY</b></p>
+            <p><b>THE PERSON NAMED IN SCHEDULE 1 AS THE GUARANTOR</b> (hereinafter referred to as the <b>"Guarantor"</b>, which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include his / her heirs,
+                 successors, administrators and permitted assigns);</p>
+            <p><b>In favour of</b></p>
+            <p><b>SAMUNNATI FINANCIAL INTERMEDIATION & SERVICES PRIVATE LIMITED</b>, a company incorporated
+                under the Companies Act, 2013 and a non-banking financial company registered with the RBI,
+                having its registered office at Baid Hi Tech Park, 8th Floor, No. 129 B,
+                East Coast Road, Thiruvanmiyur, Chennai - 600041 (hereinafter referred to as the <b>"Lender"</b> 
+                which expression shall, unless it be repugnant to the context or meaning thereof, 
+                be deemed to mean and include its successors, representatives and permitted assigns).
+            </p>
+            <p><b>IN PRESENCE OF</b></p>
+            <p><b>THE PERSON(S) NAMED IN SCHEDULE 1 AS THE 'BORROWER'</b> (hereinafter referred to as the
+                'BORROWER' which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include
+                 its successors, representatives and permitted assigns).
+            </p>
+            <p>The Guarantor, the Lender and the Borrower are hereinafter referred to, individually as a <b>“Party”</b>
+                 and collectively as the <b>"Parties"</b>, as the context may so require.</p>
+            <p><b>WHEREAS:</b></p>
+            <ol>
+                <li>
+                    The Lender and the Borrower have entered into a facility agreement on the Effective Date (“Facility Agreement”), under which the Lender has agreed 
+                    to provide the Facility to the Borrower for the Purpose. 
+                </li>
+                <li>
+                    As consideration for the Outstanding Amounts under the Facility Agreement, the Guarantor, at the request of the Borrower, has agreed to execute this Personal Guarantee in favour of the
+                     Lender on the terms and in the manner hereinafter appearing.
+                </li>
+            
+                
+            </ol>
+            
+            <p><b>NOW, THIS PERSONAL GUARANTEE WITNESSETH AS FOLLOWS:</b></p>
+            <p>The Guarantor hereby unconditionally, absolutely and irrevocably guarantees
+                 and agrees with the Lender as follows:</p>
+            <ol>
+                <li>All capitalized terms used and not defined in this Personal Guarantee shall have the meanings ascribed to them in the Facility Agreement. Clause 1.2 of the Facility Agreement applies to this Personal Guarantee as if the provisions thereof have been
+                     expressly set out mutatis mutandis in this Personal Guarantee.</li>
+                <li>Upon the occurrence of an Event of Default which has not been remedied by the Borrower within the applicable Cure Period, the Guarantor shall, within 10 (ten) days from the receipt of a written demand being made by the Lender, pay to the Lender, without demur, such sum as specified by the Lender so as to discharge and satisfy the Outstanding
+                     Amounts as may be due to the Lender under the Definitive Agreements. </li>
+                <li>This Personal Guarantee shall be unconditional, irrevocable and enforceable against the Guarantor. To give effect to this Personal Guarantee, the Lender may act as though the
+                     Guarantor is the principal debtor of the Lender.</li>
+                <li>This Personal Guarantee shall be a continuing one and shall not be wholly or partially satisfied or exhausted by any payments made to or settled with the Lender by the Guarantor and shall be valid and binding on the Guarantor and shall remain in full force and effect until full payment of all the Outstanding Amounts under the Definitive Agreements to the satisfaction of the Lender, notwithstanding any dispute between the Lender and the
+                     Borrower in respect of any of the Definitive Agreements.</li>
+                <li>The liability of the Guarantor under this Personal Guarantee shall not be affected by:
+                    <ul>
+                        (i)	Any change in the constitution or winding up/insolvency of the Borrower; <br>
+                        (ii) Any change in the constitution of the Lender.
+            
+                    </ul>
+            
+                </li>
+            
+               
+            
+                <li>The Lender shall enforce this Personal Guarantee by sending a notice
+                     to the Guarantor’s address and email set out in Schedule 1, which notice shall 
+                     be sufficient demand on the Guarantor. In the event that the Guarantor refuses delivery or acceptance of a notice, request or other communication, under this Personal Guarantee, it shall be deemed that the notice was given upon proof of the refused delivery, provided the same was sent in the manner specified herein.
+                </li>
+                <li>The Guarantor hereby indemnifies and agrees to keep the Lender,
+                     its representatives and affiliates, indemnified from and against all Losses, damages, costs including legal costs, claims and expenses whatsoever which the Lender may suffer, pay or incur by reason of or in connection with the transactions contemplated by the Definitive Agreements.
+                </li>
+                <li>The Guarantor hereby agrees and gives consent for the disclosure 
+                    and publishing by the Lender of all or any information and data relating to the Guarantor to CIBIL and/or any other agency authorized in this behalf by the RBI.
+                </li>
+                <li>Clause 12 of the Facility Agreement shall apply <i>mutatis mutandis</i> to this Personal Guarantee. </li>
+            </ol>
+            
+            <footer class="footer"></footer>
+            <div style="text-align: center;"><b>SCHEDULE 1 <br>
+                DETAILS OF GUARANTOR AND BORROWER</b>
+                
+            
+            <table border="1" style="border-collapse: collapse;width:100%">
+            <tr><thead><td>Sl. No.</td><td>Title</td><td>Details</td></thead></tr>
+            <tr><td>1.</td><td>Place of execution</td><td></td></tr>
+            <tr><td>2.</td><td>Effective Date</td><td></td></tr>
+            <tr><td>3.</td><td>Name of Guarantor</td><td>
+                <%= dirlist[2].name %>
+            
+            </td></tr>
+            <tr><td>4.</td><td>Contact Details of Guarantor</td><td><%= dirlist[2].mobile %>,<%= dirlist[2].address %></td></tr>
+            <tr><td>5.</td><td>Name(s) of borrower(s) </td><td><%= data.company_name %></td></tr>
+            <tr><td>6.</td><td>Sanction Letter reference No. and date </td><td><%= data.applicationref %>   <%= day %>/<%= month %>/<%= year %></td></tr>
+            </tr>
+            
+            
+            </table></div>
+            <br>
+            
+            <p><b>IN WITNESS WHEREOF,</b> the Parties have executed these presents the day and year first hereinabove written.<br>
+            
+                <b>SIGNED AND DELIVERED</b> by the within named Guarantor
+            </p>
+            
+            <div style="display: flex;">
+                <div style="flex: 1;">
+                    <b>_________________<br>
+                        Signed and delivered on behalf of the Lender
+                    </b>
+                    <p>___________________________ <br><br>
+            
+                        Name: ______________________________ <br><br>
+                        
+                        Title: Authorised Signatory<br>
+                        </p>
+                    <b>Signed and delivered on behalf of the Borrower</b><br>
+                    <p>___________________________ <br><br>
+            
+                        Name: ______________________________ <br><br>
+                        
+                        Title: Authorised Signatory<br>
+                        </p><br>
+                        <p><b>WITNESSED BY </b><br>
+            
+            
+                            _______________________ <br>
+                            Name:<br>
+                            
+                            
+                            _______________________ <br>
+                            Name:<br>
+                            </p>
+                </div>
+            
+                
+            </div>
+            </div>
+        
+            <footer class="footer"></footer>
+            <!-- ### G 1 ######### -->
+            <div style="margin-top:300px"></div>
+            <div>
+                <div style="text-align: center;"><b>UNCONDITIONAL AND IRREVOCABLE PERSONAL GUARANTEE</b></div>
+                <p>This unconditional and irrevocable personal guarantee (<b>"Personal Guarantee"</b>) is made 
+                    and executed on the day, month and year set out in SCHEDULE 1 (“Effective Date”) at the
+                     place mentioned in SCHEDULE 1</p>
+                    
+                <p><b>BY</b></p>
+                <p><b>THE PERSON NAMED IN SCHEDULE 1 AS THE GUARANTOR</b> (hereinafter referred to as the <b>"Guarantor"</b>, which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include his / her heirs,
+                     successors, administrators and permitted assigns);</p>
+                <p><b>In favour of</b></p>
+                <p><b>SAMUNNATI FINANCIAL INTERMEDIATION & SERVICES PRIVATE LIMITED</b>, a company incorporated
+                    under the Companies Act, 2013 and a non-banking financial company registered with the RBI,
+                    having its registered office at Baid Hi Tech Park, 8th Floor, No. 129 B,
+                    East Coast Road, Thiruvanmiyur, Chennai - 600041 (hereinafter referred to as the <b>"Lender"</b> 
+                    which expression shall, unless it be repugnant to the context or meaning thereof, 
+                    be deemed to mean and include its successors, representatives and permitted assigns).
+                </p>
+                <p><b>IN PRESENCE OF</b></p>
+                <p><b>THE PERSON(S) NAMED IN SCHEDULE 1 AS THE 'BORROWER'</b> (hereinafter referred to as the
+                    'BORROWER' which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include
+                     its successors, representatives and permitted assigns).
+                </p>
+                <p>The Guarantor, the Lender and the Borrower are hereinafter referred to, individually as a <b>“Party”</b>
+                     and collectively as the <b>"Parties"</b>, as the context may so require.</p>
+                <p><b>WHEREAS:</b></p>
+                <ol>
+                    <li>
+                        The Lender and the Borrower have entered into a facility agreement on the Effective Date (“Facility Agreement”), under which the Lender has agreed 
+                        to provide the Facility to the Borrower for the Purpose. 
+                    </li>
+                    <li>
+                        As consideration for the Outstanding Amounts under the Facility Agreement, the Guarantor, at the request of the Borrower, has agreed to execute this Personal Guarantee in favour of the
+                         Lender on the terms and in the manner hereinafter appearing.
+                    </li>
+                
+                    
+                </ol>
+                
+                <p><b>NOW, THIS PERSONAL GUARANTEE WITNESSETH AS FOLLOWS:</b></p>
+                <p>The Guarantor hereby unconditionally, absolutely and irrevocably guarantees
+                     and agrees with the Lender as follows:</p>
+                <ol>
+                    <li>All capitalized terms used and not defined in this Personal Guarantee shall have the meanings ascribed to them in the Facility Agreement. Clause 1.2 of the Facility Agreement applies to this Personal Guarantee as if the provisions thereof have been
+                         expressly set out mutatis mutandis in this Personal Guarantee.</li>
+                    <li>Upon the occurrence of an Event of Default which has not been remedied by the Borrower within the applicable Cure Period, the Guarantor shall, within 10 (ten) days from the receipt of a written demand being made by the Lender, pay to the Lender, without demur, such sum as specified by the Lender so as to discharge and satisfy the Outstanding
+                         Amounts as may be due to the Lender under the Definitive Agreements. </li>
+                    <li>This Personal Guarantee shall be unconditional, irrevocable and enforceable against the Guarantor. To give effect to this Personal Guarantee, the Lender may act as though the
+                         Guarantor is the principal debtor of the Lender.</li>
+                    <li>This Personal Guarantee shall be a continuing one and shall not be wholly or partially satisfied or exhausted by any payments made to or settled with the Lender by the Guarantor and shall be valid and binding on the Guarantor and shall remain in full force and effect until full payment of all the Outstanding Amounts under the Definitive Agreements to the satisfaction of the Lender, notwithstanding any dispute between the Lender and the
+                         Borrower in respect of any of the Definitive Agreements.</li>
+                    <li>The liability of the Guarantor under this Personal Guarantee shall not be affected by:
+                        <ul>
+                            (i)	Any change in the constitution or winding up/insolvency of the Borrower; <br>
+                            (ii) Any change in the constitution of the Lender.
+                
+                        </ul>
+                
+                    </li>
+                
+                   
+                
+                    <li>The Lender shall enforce this Personal Guarantee by sending a notice
+                         to the Guarantor’s address and email set out in Schedule 1, which notice shall 
+                         be sufficient demand on the Guarantor. In the event that the Guarantor refuses delivery or acceptance of a notice, request or other communication, under this Personal Guarantee, it shall be deemed that the notice was given upon proof of the refused delivery, provided the same was sent in the manner specified herein.
+                    </li>
+                    <li>The Guarantor hereby indemnifies and agrees to keep the Lender,
+                         its representatives and affiliates, indemnified from and against all Losses, damages, costs including legal costs, claims and expenses whatsoever which the Lender may suffer, pay or incur by reason of or in connection with the transactions contemplated by the Definitive Agreements.
+                    </li>
+                    <li>The Guarantor hereby agrees and gives consent for the disclosure 
+                        and publishing by the Lender of all or any information and data relating to the Guarantor to CIBIL and/or any other agency authorized in this behalf by the RBI.
+                    </li>
+                    <li>Clause 12 of the Facility Agreement shall apply <i>mutatis mutandis</i> to this Personal Guarantee. </li>
+                </ol>
+                
+                <footer class="footer"></footer>
+                <div style="text-align: center;"><b>SCHEDULE 1 <br>
+                    DETAILS OF GUARANTOR AND BORROWER</b>
+                    
+                
+                <table border="1" style="border-collapse: collapse;width:100%">
+                <tr><thead><td>Sl. No.</td><td>Title</td><td>Details</td></thead></tr>
+                <tr><td>1.</td><td>Place of execution</td><td></td></tr>
+                <tr><td>2.</td><td>Effective Date</td><td></td></tr>
+                <tr><td>3.</td><td>Name of Guarantor</td><td>
+                    <%= dirlist[3].name %>
+                </td></tr>
+                <tr><td>4.</td><td>Contact Details of Guarantor</td><td><%= dirlist[3].mobile %>, <%= dirlist[3].address %></td></tr>
+                <tr><td>5.</td><td>Name(s) of borrower(s) </td><td><%= data.company_name %></td></tr>
+                <tr><td>6.</td><td>Sanction Letter reference No. and date </td><td><%= data.applicationref %>   <%= day %>/<%= month %>/<%= year %></td></tr>
+                </tr>
+                
+                
+                </table></div>
+                <br>
+                
+                <p><b>IN WITNESS WHEREOF,</b> the Parties have executed these presents the day and year first hereinabove written.<br>
+                
+                    <b>SIGNED AND DELIVERED</b> by the within named Guarantor
+                </p>
+                
+                <div style="display: flex;">
+                    <div style="flex: 1;">
+                        <b>_________________<br>
+                            Signed and delivered on behalf of the Lender
+                        </b>
+                        <p>___________________________ <br><br>
+                
+                            Name: ______________________________ <br><br>
+                            
+                            Title: Authorised Signatory<br>
+                            </p>
+                        <b>Signed and delivered on behalf of the Borrower</b><br>
+                        <p>___________________________ <br><br>
+                
+                            Name: ______________________________ <br><br>
+                            
+                            Title: Authorised Signatory<br>
+                            </p><br>
+                            <p><b>WITNESSED BY </b><br>
+                
+                
+                                _______________________ <br>
+                                Name:<br>
+                                
+                                
+                                _______________________ <br>
+                                Name:<br>
+                                </p>
+                    </div>
+                
+                    
+                </div>
+                </div>
+            
+                <footer class="footer"></footer>
+                <!-- ### G 1 ######### -->
+                <div style="margin-top:300px"></div>
+                <div>
+                    <div style="text-align: center;"><b>UNCONDITIONAL AND IRREVOCABLE PERSONAL GUARANTEE</b></div>
+                    <p>This unconditional and irrevocable personal guarantee (<b>"Personal Guarantee"</b>) is made 
+                        and executed on the day, month and year set out in SCHEDULE 1 (“Effective Date”) at the
+                         place mentioned in SCHEDULE 1</p>
+                        
+                    <p><b>BY</b></p>
+                    <p><b>THE PERSON NAMED IN SCHEDULE 1 AS THE GUARANTOR</b> (hereinafter referred to as the <b>"Guarantor"</b>, which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include his / her heirs,
+                         successors, administrators and permitted assigns);</p>
+                    <p><b>In favour of</b></p>
+                    <p><b>SAMUNNATI FINANCIAL INTERMEDIATION & SERVICES PRIVATE LIMITED</b>, a company incorporated
+                        under the Companies Act, 2013 and a non-banking financial company registered with the RBI,
+                        having its registered office at Baid Hi Tech Park, 8th Floor, No. 129 B,
+                        East Coast Road, Thiruvanmiyur, Chennai - 600041 (hereinafter referred to as the <b>"Lender"</b> 
+                        which expression shall, unless it be repugnant to the context or meaning thereof, 
+                        be deemed to mean and include its successors, representatives and permitted assigns).
+                    </p>
+                    <p><b>IN PRESENCE OF</b></p>
+                    <p><b>THE PERSON(S) NAMED IN SCHEDULE 1 AS THE 'BORROWER'</b> (hereinafter referred to as the
+                        'BORROWER' which expression shall, unless it be repugnant to the context or meaning thereof, be deemed to mean and include
+                         its successors, representatives and permitted assigns).
+                    </p>
+                    <p>The Guarantor, the Lender and the Borrower are hereinafter referred to, individually as a <b>“Party”</b>
+                         and collectively as the <b>"Parties"</b>, as the context may so require.</p>
+                    <p><b>WHEREAS:</b></p>
+                    <ol>
+                        <li>
+                            The Lender and the Borrower have entered into a facility agreement on the Effective Date (“Facility Agreement”), under which the Lender has agreed 
+                            to provide the Facility to the Borrower for the Purpose. 
+                        </li>
+                        <li>
+                            As consideration for the Outstanding Amounts under the Facility Agreement, the Guarantor, at the request of the Borrower, has agreed to execute this Personal Guarantee in favour of the
+                             Lender on the terms and in the manner hereinafter appearing.
+                        </li>
+                    
+                        
+                    </ol>
+                    
+                    <p><b>NOW, THIS PERSONAL GUARANTEE WITNESSETH AS FOLLOWS:</b></p>
+                    <p>The Guarantor hereby unconditionally, absolutely and irrevocably guarantees
+                         and agrees with the Lender as follows:</p>
+                    <ol>
+                        <li>All capitalized terms used and not defined in this Personal Guarantee shall have the meanings ascribed to them in the Facility Agreement. Clause 1.2 of the Facility Agreement applies to this Personal Guarantee as if the provisions thereof have been
+                             expressly set out mutatis mutandis in this Personal Guarantee.</li>
+                        <li>Upon the occurrence of an Event of Default which has not been remedied by the Borrower within the applicable Cure Period, the Guarantor shall, within 10 (ten) days from the receipt of a written demand being made by the Lender, pay to the Lender, without demur, such sum as specified by the Lender so as to discharge and satisfy the Outstanding
+                             Amounts as may be due to the Lender under the Definitive Agreements. </li>
+                        <li>This Personal Guarantee shall be unconditional, irrevocable and enforceable against the Guarantor. To give effect to this Personal Guarantee, the Lender may act as though the
+                             Guarantor is the principal debtor of the Lender.</li>
+                        <li>This Personal Guarantee shall be a continuing one and shall not be wholly or partially satisfied or exhausted by any payments made to or settled with the Lender by the Guarantor and shall be valid and binding on the Guarantor and shall remain in full force and effect until full payment of all the Outstanding Amounts under the Definitive Agreements to the satisfaction of the Lender, notwithstanding any dispute between the Lender and the
+                             Borrower in respect of any of the Definitive Agreements.</li>
+                        <li>The liability of the Guarantor under this Personal Guarantee shall not be affected by:
+                            <ul>
+                                (i)	Any change in the constitution or winding up/insolvency of the Borrower; <br>
+                                (ii) Any change in the constitution of the Lender.
+                    
+                            </ul>
+                    
+                        </li>
+                    
+                       
+                    
+                        <li>The Lender shall enforce this Personal Guarantee by sending a notice
+                             to the Guarantor’s address and email set out in Schedule 1, which notice shall 
+                             be sufficient demand on the Guarantor. In the event that the Guarantor refuses delivery or acceptance of a notice, request or other communication, under this Personal Guarantee, it shall be deemed that the notice was given upon proof of the refused delivery, provided the same was sent in the manner specified herein.
+                        </li>
+                        <li>The Guarantor hereby indemnifies and agrees to keep the Lender,
+                             its representatives and affiliates, indemnified from and against all Losses, damages, costs including legal costs, claims and expenses whatsoever which the Lender may suffer, pay or incur by reason of or in connection with the transactions contemplated by the Definitive Agreements.
+                        </li>
+                        <li>The Guarantor hereby agrees and gives consent for the disclosure 
+                            and publishing by the Lender of all or any information and data relating to the Guarantor to CIBIL and/or any other agency authorized in this behalf by the RBI.
+                        </li>
+                        <li>Clause 12 of the Facility Agreement shall apply <i>mutatis mutandis</i> to this Personal Guarantee. </li>
+                    </ol>
+                    
+                    <footer class="footer"></footer>
+                    <div style="text-align: center;"><b>SCHEDULE 1 <br>
+                        DETAILS OF GUARANTOR AND BORROWER</b>
+                        
+                    
+                    <table border="1" style="border-collapse: collapse;width:100%">
+                    <tr><thead><td>Sl. No.</td><td>Title</td><td>Details</td></thead></tr>
+                    <tr><td>1.</td><td>Place of execution</td><td></td></tr>
+                    <tr><td>2.</td><td>Effective Date</td><td></td></tr>
+                    <tr><td>3.</td><td>Name of Guarantor</td><td><%= dirlist[4].name %></td></tr>
+                    <tr><td>4.</td><td>Contact Details of Guarantor</td><td><%= dirlist[4].mobile %>, <%= dirlist[4].address %></td></tr>
+                    <tr><td>5.</td><td>Name(s) of borrower(s) </td><td><%= data.company_name %></td></tr>
+                    <tr><td>6.</td><td>Sanction Letter reference No. and date </td><td><%= data.applicationref %>   <%= day %>/<%= month %>/<%= year %></td></tr>
+                    </tr>
+                    
+                    
+                    </table></div>
+                    <br>
+                    
+                    <p><b>IN WITNESS WHEREOF,</b> the Parties have executed these presents the day and year first hereinabove written.<br>
+                    
+                        <b>SIGNED AND DELIVERED</b> by the within named Guarantor
+                    </p>
+                    
+                    <div style="display: flex;">
+                        <div style="flex: 1;">
+                            <b>_________________<br>
+                                Signed and delivered on behalf of the Lender
+                            </b>
+                            <p>___________________________ <br><br>
+                    
+                                Name: ______________________________ <br><br>
+                                
+                                Title: Authorised Signatory<br>
+                                </p>
+                            <b>Signed and delivered on behalf of the Borrower</b><br>
+                            <p>___________________________ <br><br>
+                    
+                                Name: ______________________________ <br><br>
+                                
+                                Title: Authorised Signatory<br>
+                                </p><br>
+                                <p><b>WITNESSED BY </b><br>
+                    
+                    
+                                    _______________________ <br>
+                                    Name:<br>
+                                    
+                                    
+                                    _______________________ <br>
+                                    Name:<br>
+                                    </p>
+                        </div>
+                    
+                        
+                    </div>
+                    </div>
+                
+                    <!-- ### G 1 ######### -->
+                                                
+
+
+    </body>
+    </html>

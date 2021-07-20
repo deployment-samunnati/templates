@@ -1,0 +1,315 @@
+<html>
+<head>
+<style>
+
+@media print {
+  footer {page-break-after: always;}
+}
+
+
+.modal-xl {
+    margin-left: auto !important;
+    margin-right: auto !important;
+background-color:blue;
+    
+}
+
+body{
+ font-family: Calibri;
+ font-size:12px; 
+ text-align:justify;
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  height:100px;
+  margin-right: 100px;
+  top:50px;
+}
+.left {
+  position: absolute;
+  left: 0px;
+  top:20px;
+  height:80px;
+  margin-left: 100px;
+}
+
+p{
+font-size:12px;
+}
+
+.header{
+height:120px;
+}
+
+.data{
+align:left;
+position:relative;
+}
+
+.footer {
+bottom:0px;
+}
+
+ol{
+font-size:12px;
+}
+li{
+font-size:12px;
+}
+
+td {
+padding:5px;
+}
+table, td, th {
+  border: 1px solid black;
+  font-size:12px;
+}
+</style>
+
+</head>
+
+<body align="left" style=" margin-top: 00px;  margin-bottom: 10px;  margin-right: 100px;  margin-left: 100px;">
+<div class="left">
+	<img src="https://mlslxw0xad5d.i.optimole.com/uSNfBEo-5YLb7mqp/w:auto/h:auto/q:90/https://samunnati.com/wp-content/uploads/2021/05/Samunnati-logo-with-Registered.png">
+</div>
+<% 
+var dt = new Date();
+
+year = dt.getFullYear() 
+month = dt.getMonth() + 1
+monthname = dt.toLocaleString('default', { month: 'short'});
+day = dt.getDate();
+
+
+expirydate = new Date();
+expirydate.setMonth ( expirydate.getMonth() + 12 )
+displayexpirydate = expirydate.getDate() + "/" + (expirydate.getMonth() + 1) + "/"  + expirydate.getFullYear() 
+
+
+lastdate = new Date();
+lastdate.setMonth ( lastdate.getMonth() + 11 )
+displaylastdate = lastdate.getDate() + "/" + (lastdate.getMonth() + 1) + "/"  + lastdate.getFullYear() 
+
+
+
+%>
+<!--          dt.setMonth( dt.getMonth() + 2 ); -->
+
+
+<div class="right">
+	Ref : SAMFIN/FPO/<%= data.applicationref %>/2021-22 <br>
+	Date: <%= day %> / <%= month %> / <%= year %>
+   
+</div>
+
+<div>
+<div align="left" style="margin-top: 150px">
+<p>
+To, <br>
+
+<b><%= data.fponame%> </b> <br>
+Contact Name: <%= data.contact_name%><br>
+Contact Number: <%= data.mobile%><br>
+Email ID: <%= data.company_email%><br>
+
+</p>
+
+<p>
+Dear Sir/Madam,  
+</p>
+
+<div style="text-align: center;"><b><u>SUB: SANCTION OF CREDIT FACILITY</b></u></div>
+<div align="left">
+<p>
+	With reference to your application for Credit facility, we are pleased to communicate the sanction of following credit facility. The terms and conditions governing the credit facility made available by Samunnati Financial Intermediation & Services Private Limited (hereinafter called “Samunnati”) to <strong>“M/S. <%= data.company_name %>”</strong> (“hereinafter called “Borrower”) are provided here under:  
+</p>
+</div>
+<div align="">
+<table border="1" style="border-collapse: collapse;font-size:12px">
+<tr><td><b>Type of Facility</b></td><td><%= data.questionnaire.loan_purpose %></td></tr>
+<tr><td><b>Facility Limit</b></td><td>
+	<% if (data.questionnaire) {  
+		words = toWords.convert(data.questionnaire.loan_amount*100000,{ currency: true })
+	%>
+		<%= data.questionnaire.loan_amount %> (Lakhs) /  In words <%= words %> 
+	<% } %>
+
+</td></tr>
+<tr><td><b>Purpose</b></td><td>
+	<% if (data.questionnaire) {  %>
+		<%= data.questionnaire.loan_purpose %>
+	<% } %>
+</td></tr>
+<tr><td><b>Revolving/Non-Revolving</b></td><td>Revolving</td></tr>
+<tr><td><b>Tenure</b></td><td>
+	<% if (data.questionnaire) {  %>
+		<%= data.questionnaire.loan_tenure %> Months
+	<% } %>
+
+</td></tr>
+<tr><td><b>Validity of Limit</b></td><td>12 Months</td></tr>
+<tr><td><b>Repayment</b></td><td>
+	<% if (data.questionnaire.loan_purpose.indexOf('equipment') > -1 ) { %>
+		 Equated Monthly Installment
+	<% } else { %>
+		Interest payable monthly, principal at end of the tenure
+	<% } %>
+	
+
+</td></tr>
+<tr><td><b>Personal Guarantee</b></td><td>
+	<% for (dir of data.directors) { %>
+		<%  if (dir.liability=="1") { %>
+		  <b><%= dir.full_name %></b> <br>
+	  <% } } %>
+
+</td></tr>
+<tr><td><b>Specific condition</b></td>
+	<td><ol>
+		<li>Four (4) Undated Cheques (UDCs) from the borrower for overall limit from Current Account with 
+			Bank Name _____<%= data.bankname %>___________ bearing Account Number 
+			   <% if (!data.bank_details)  { %>
+				__________________________
+				<% } else { %> 
+				<%= data.bank_details.account_number %>
+				<% } %> 
+			 in favour of “Samunnati Financial Intermediation and Services Pvt Ltd.,” with each cheque superscription as “Not Exceeding Rs. <%= data.questionnaire.loan_amount %> /- (lakhs) </li>
+		<li>Two (2) Undated Cheques from the personal bank account of each of the Guarantors in favour of “Samunnati Financial Intermediation and Services Pvt Ltd.,” with each cheque superscription as “Not Exceeding Rs. <%= data.questionnaire.loan_amount %> /- (lakhs) /-</li>
+	</ol></td>
+</tr>
+<tr><td><b>Rate of interest</b></td><td>
+<table border="1" style="border-collapse: collapse;font-size:12px">
+
+<tr><td><b>Facility Details</b></td><td><b>Rate of Interest</b></td><td><b>Interest in amount</b></td></tr>
+<tr><td>Short Term Loan</td><td>14% p.a.</td><td>Rs. 11.67 Per Thousand Per Month</td></tr>
+</table>
+
+
+</td></tr>
+
+
+<tr><td><b>Default Rate</b></td>
+	<td><p>Any irregularity on account of non-payment of interest/charges/instalments will attract additional Finance Charge of 12.00% per annum over and above the contracted rate for payments received.
+</p></td></tr>
+<tr><td><b>Processing Fee</b></td><td>1% p.a of the overall limit to be collected upfront + applicable taxes i.e Rs.<%= Math.round(data.questionnaire.loan_amount/100*100000,2) %>  + applicable taxes</td></tr>
+<tr><td><b>Mode of Operation</b></td><td><p>Loan will be disbursed directly into the FPC’s account</p></td></tr>
+<tr><td><b>Documentation</b></td><td>
+	<ol><li>Accepted Sanction Letter duly acknowledged by the Borrower</li>
+<li>Board Resolution </li>
+<li>DP Note for the limits Sanctioned </li>
+<li>Term Loan Agreement </li>
+<li>Personal Guarantee Deed from each of the Guarantors</li>
+<li>Four (4) Undated Cheques (UDCs) from the Borrower as mentioned in specific condition</li>
+<li>Two (2) Undated Cheques (UDCs) from the Guarantor as mentioned in specific condition</li>
+<li>Signed NACH Form along with NACH Mandate Letter</li>
+</ol></td></tr>
+<tr><td><b> Loan Covenants </b></td><td><ol>
+	
+<li>Borrower to provide bank statement of current accounts on half yearly basis</li>
+<li>Audited financials to be submitted within 6 months from the end of the financial year</li>
+</ol></td></tr>
+
+
+</table><br>
+</div>
+<div style="text-align:center"><u><b>OTHER GENERAL TERMS AND CONDITIONS</b></u></div>
+
+<div align="left">
+<ol>
+	<li>
+		<p>The credit facilities offered by us will be available for utilization, subject to compliance of all the terms and conditions of the Sanction Letter and upon receipt of all the requisite documents, security charge creation, as set out in herein, in a form acceptable to us. Please arrange to return the duplicate of this Sanction letter duly signed by the authorized signatories of Borrower and the Guarantor(s) within 30 days from the date hereof, else the Sanction Letter’s validity will automatically expire.  The credit facilities offered herein may continue to be offered at the sole discretion of Samunnati, if this Sanction Letter is accepted by the Borrower not later than 30 days of this Sanction Letter date.
+		</p>
+	</li>
+
+	<li><p>
+		<ol style="list-style-type: lower-roman;">
+			<li>
+				<p>All the facilities are subject to Samunnati's customary overriding right of seeking repayment on demand and shall expire on <%= displayexpirydate %>. Thereafter, Samunnati may renew the same for a further period, subject to the conduct of the account being satisfactory. For this purpose, the Borrower shall submit the relevant financial information to Samunnati latest by <%= displaylastdate %> 
+			    </p>
+			</li>
+			<li>
+				<p>The Facility falls due for review on <%= displayexpirydate %>.  For this purpose, the Borrower shall submit the relevant financial information to Samunnati latest by <%= displaylastdate %> 
+				</p>
+			</li>
+		</ol></p>
+	</li>
+	<li><p>Samunnati Financial Intermediation and Services Pvt Ltd., or its authorized agency shall have the right to check the Credit Bureau Reports of the Borrower & Guarantor at any point of time during the currency of this sanction. 
+	</p></li>
+	
+	
+	<li><p>Samunnati reserves the right to discontinue the credit facilities /advance / loans and/ or to withhold / stop any disbursement/s without assigning any reasons / giving any notice, in case of non-compliance / breach of any of the terms & conditions stipulated therein and from time to time as also in the relevant document or any information / particulars furnished to us found to have incorrect or in case of any development or situations wherein in the opinion of Samunnati, its interest will be/likely to be prejudicially affected by such continuation or disbursement.
+		</p>
+	</li>
+	
+	<li>As per RBI guidelines, Samunnati follows a risk based pricing approach.  Accordingly, the pricing offered is based on our internal evaluation and assessment of each Borrower from a risk perspective.  The risk assessment is based on Samunnati’s internal assessment norms</li>
+
+	<li>This Sanction Letter replaces all other existing Sanction Letter(s) / in principle sanction communication if any issued to the borrower, however the Documents executed/Charges created pursuant to the earlier continue to be binding on the Borrower and would cover the facilities extended through this Sanction Letter, unless and until explicitly stated/ communicated by Samunnati, otherwise.</li>
+
+
+
+
+</ol>
+
+<footer class="footer"></footer>
+<p>Your Samunnati Representative is ___<%= data.state_head %>___  and you can reach him/her at <%= data.state_mobile %> or __<%= data.state_email %>__ (E-Mail) for any clarifications/requirements.
+
+By signing the last page of this Sanction Letter, the Borrower hereby agrees to be bound by all terms and conditions stated on this page and all the preceding pages of this Sanction Letter.
+
+</p>
+</div>
+<div style="display: flex;">
+	<div align="left">
+		<b>For Samunnati Financial Intermediation & Services Private Limited. </b><br><br><br><br> 
+		<b>_________________<br> 
+		Authorized Signatory <br>
+		Name : <br>
+		Date:	<br>
+		</b>
+	</div>
+
+	<div align="right">
+		<p>Acknowledged, Agreed and Signed by:<br>
+			<b> For M/S. <%= data.company_name %></b>  </p> <br>
+		<p>
+			<b>    
+				<table border="1"  style="width:100%;border-collapse: collapse;font-size:12px">
+					<tr>
+						<%    
+						for (dir of data.directors) { %>
+						 <%  if (dir.liability=="1") { %>
+						<td>
+						  <%= dir.full_name %> <br><br>
+						  _____________________ <br><br>
+						  Authorized Signatories <br>
+						 
+						  Date : <br><br>
+						</td>						  
+						  <% } } %>
+
+
+					</tr>
+				</table> 
+
+
+				<br><br>
+
+
+				Acknowledged, Agreed and Signed by: <br> <br>
+				For “Guarantor” <br><br><br>
+
+
+
+			</b>
+		</p>
+
+
+	</div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+<html>
+	<head>
+	<style>
+	
+	@media print {
+	  footer {page-break-after: always;}
+	}
+	
+	
+	.modal-xl {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	background-color:blue;
+		
+	}
+	
+	body{
+	 
+	  font-size:12px;
+	  font-family: Calibri;
+	}
+	.right {
+	  position: absolute;
+	  right: 0px;
+	  width: 300px;
+	  height:100px;
+	  padding-top:30px;
+	}
+	.left {
+	  position: absolute;
+	  left: 0px;
+	  height:80px;
+	  top:20px;
+	  margin-left: 100px;
+	}
+	
+	p{
+	font-size:12px;
+	padding:5px;
+	}
+	
+	.header{
+	height:120px;
+	}
+	
+	.data{
+	text-align:left;
+	position:relative;
+	}
+	
+	.footer {
+	bottom:0px;
+	}
+	
+	ol{
+	font-size:12px;
+	}
+	li{
+	font-size:12px;
+	padding:5px;
+	}
+	
+	td {
+	padding:5px;
+	}
+	</style>
+	
+	</head>
+	<% 
+	var dt = new Date();
+   
+	year = dt.getFullYear() 
+	month = dt.getMonth() + 1
+	monthname = dt.toLocaleString('default', { month: 'short'});
+	day = dt.getDate();
+    
+	%>
+
+	<%   dirlist=['','','','','']; i = 0;
+       for (dir of data.directors) { %>
+		<%  if (dir.liability=="1") { 
+            dirlist[i]=dir.full_name
+            i =  i + 1;
+            %>
+	  <% } } %>
+
+<body align="left" style="text-align: justify; margin-top: 20px;  margin-bottom: 10px;  margin-right: 100px;  margin-left: 100px;">
+    <div class=" ">
+        <div class="header">
+ 
+        </div>
+        
+    </div>
+    <div>
+
+        <div class="">
+        
+        
+        <div style="text-align: center;"><b><u>BOARD RESOLUTION FOR BORROWER</u></b></div><br><br>
+        <p><b>Certified true copy of the Resolution passed by the Board of Directors of
+            M/s.___<%= data.company_name %> __ (the "Company") at their meeting held 
+            on ___________ at  ____________________________________________________________________
+        </b>
+        </p>
+        
+        <p style="text-align: justify;">The Board was informed that at the request of the Company, 
+            <b>Samunnati Financial Intermediation and Services Private Limited</b>,
+             a NBFC incorporated under the Companies Act, 2013 and having its
+              Corporate office at No.129B, Baid Hi-Tech Park, 8th Floor, ECR, Thiruvanmiyur,
+               Chennai – 600041 (hereinafter referred to as <b>"Samunnati"</b>) has sanctioned for <b> <%= data.questionnaire.loan_purpose %> </b> upto a maximum principal
+                 amount of <b>Rs. <%= data.questionnaire.loan_amount %> lakhs /-(Rupees 
+                 <%= toWords.convert(data.questionnaire.loan_amount*100000,{ currency: true }) %> Only) </b> to the Company,
+                  on the terms, conditions and the securities as mentioned in 
+                  the sanction letter dated <%= day %>/<%= month %>/<%= year %> bearing reference 
+                  number SAMFIN/<%= data.applicationref %> (the <b>"Sanction Letter"</b>) and as 
+            may be stipulated by Samunnati from time to time.</p>
+            <p>The Board passed the following Resolutions:</p>
+        <p><b>Resolved That:</b></p>
+        
+        <ol>
+            <li>
+                 The Company be and is hereby authorised to avail of from Samunnati the credit facility, 
+                 as mentioned in the Sanction Letter, by whatever name called whether granted
+                  upto a maximum principal amount of Rs._<%= data.questionnaire.loan_amount %> lakhs /-(Rupees <%= toWords.convert(data.questionnaire.loan_amount*100000,{ currency: true }) %>__Only)
+                   in the aggregate, (<b>"the credit facilities"</b>) on the terms, conditions and 
+                   securities as mentioned in the Sanction Letter and as may be stipulated by Samunnati from time
+                 to time and to furnish / create the said securities in favour of Samunnati.
+            </li>
+            <li>
+                The persons named in the Schedule `A’ hereunder written (<b>"Authorised Persons"</b>), 
+                any two of them jointly/any of them severally<sup>1</sup> , is/are authorized inter alia to 
+                do the following acts, deeds and things in the name and on behalf of the Company;
+            </li>
+            <ul style="list-style-type:lower-roman">
+                <li>
+                    To give, accept, confirm, make out, draw, execute, 
+                    endorse, discount, negotiate, pay, satisfy, withdraw, discharge, issue and transfer all 
+                    and any sanction letter/s of  Samunnati, cheques, drafts, bills of exchange, promissory
+                     notes (internal and foreign), hundies, bonds, dividend or interest warrants, 
+                     letters of credit, bills of lading, delivery orders, policies of insurance, 
+                     negotiable or transferable instruments, agreements, security documents, 
+                     declarations, undertakings, writings, indemnities and all renewals and/or 
+                     amendments thereto and also all acknowledgment/s or confirmation of debt and/or security 
+                     and deposit the title deeds of immovable properties of the company  as specified in
+                      sanction letter of Samunnati for the purpose of creation of securities, 
+                      as Samunnati may require from time to time in connection with / for the 
+                    said credit facilities and also to operate any or all of the credit facility 
+                    account(s) maintained by the Company with Samunnati. 
+                </li>
+                <li>To open accounts (including escrow account) with the Samunnati and to
+                     charge (in the form and substance acceptable
+                    to the Samunnati) such account in favour of the Samunnati, 
+                    as required by Samunnati.
+                </li>
+            </ul>
+        <li> <sup>2</sup>The Company do request
+            <% for (dir of data.directors) { %>
+            <%  if (dir.liability=="1") { %>
+                <b> <%= dir.full_name %>, </b>
+          <% } } %>  to offer and execute guarantee in 
+            favour of Samunnati to guarantee and to secure the repayment of the credit facilities
+             granted / to be granted to
+             the Company together with interest, cost, and expenses and other charges thereon.
+        </li>
+        <li> <sup>3</sup>The Company do file the requisite particulars of charge/s with the Registrar of the Companies, <%= data.state %> in respect of the securities provided/to be provided to secure
+             the credit facilities after execution of respective documents within the time prescribed by law.</li>
+        <li>A copy of the above resolutions be furnished to the certified as
+             true copy by  _________________, __________________________ <sup>4</sup> of the Company 
+            and that the Samunnati is authorised to act and rely upon these resolutions.</li>
+            
+        </ol>
+        
+        <footer class="footer"></footer>
+        <div style="text-align: center;"><b>SCHEDULE "A" <br><br>
+            SPECIFIC DETAILS OF THE BORROWER</b>
+            
+        
+        <table style="border-collapse: collapse;margin-left: auto; margin-right: auto;width: 100%;" border="1">
+            <tr><thead><td><b>Name</b></td><td><b>Designation</b></td></thead></tr>
+             
+            <% for (dir of data.directors) { %>
+                <%  if (dir.liability=="1") { %>
+                    <tr><td>&nbsp;</td><td></td></tr>
+              <% } } %>  
+           
+           
+
+            
+            </tr>
+        
+        
+        </table>
+        </div>
+        <br>
+        
+        
+        
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                For <b><%= data.company_name %> Ltd.</b><br>
+                    Chairman / Managing Director / Company Secretary <sup>5</sup> <br>
+                Place : <br>
+                Date:	<br>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div style="display: flex;">
+            <div style="flex: 1;">
+            
+                <p>______________________________________________________________________________________</p>
+                <p> <sup>1</sup> Delete whichever is not applicable. </p>
+                <p> <sup>2</sup>To be retained in case the credit facilities are secured by a guarantee.</p>
+                <p> <sup>3</sup>To be retained in case of secured credit facilities.</p>
+                <p> <sup>4</sup>Needs to be Company Secretary, Managing Director or Chairman of Board meeting, other than who is/are authorised to execute document/s. </p>	
+                <p><sup>5</sup>Needs to be certified by Company Secretary, Managing Director or Chairman of Board meeting of Company, other than who is/are authorised to execute document/s. </p>
+                
+        
+            </div>
+        
+            
+        </div>
+        </div>
+        
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

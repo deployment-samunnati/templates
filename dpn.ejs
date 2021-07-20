@@ -1,0 +1,138 @@
+<html>
+<head>
+<style>
+
+@media print {
+  footer {page-break-after: always;}
+}
+
+
+.modal-xl {
+    margin-left: auto !important;
+    margin-right: auto !important;
+background-color:blue;
+    
+}
+
+body:{
+ 
+  font-size:12px;
+  font-family: Calibri;
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  height:100px;
+  padding-top:30px;
+}
+.left {
+  position: absolute;
+  left: 0px;
+  height:80px;
+  margin-left: 100px;
+}
+
+p{
+font-size:14px;
+padding:10px;
+}
+
+.header{
+height:120px;
+}
+
+.data{
+align:left;
+position:relative;
+}
+
+.footer {
+bottom:0px;
+}
+
+ol{
+font-size:12px;
+}
+li{
+font-size:12px;
+}
+
+td {
+padding:5px;
+}
+</style>
+
+</head>
+<body align="left" style=" margin-top: 10px;  margin-bottom: 10px;  margin-right: 100px;  margin-left: 100px;">
+  <% 
+  var dt = new Date();
+ 
+  year = dt.getFullYear() 
+  month = dt.getMonth() + 1
+  monthname = dt.toLocaleString('default', { month: 'short'});
+  day = dt.getDate();
+ 
+  %>
+<!-- <div class=" ">
+<div class="header">
+<div class="right">
+
+</div>
+</div>
+
+</div> -->
+
+<div align="center">
+Demand Promissory Note <br>
+<!-- <p> Application Ref : <%=data.applicationref %> </p> -->
+</div>
+
+<div align="">
+<p style="text-align: justify;"> On demand We M/s. <b><%=data.company_name %></b>, having our registered office/office at <%=data.address %> 
+  (Borrower(s)), jointly and severally, unconditionally and irrevocably promise(s) to pay immediately upon demand, a sum of Rs. <%=data.questionnaire.loan_amount %> 
+  lakhs /-  (Rupees _<%= toWords.convert(data.questionnaire.loan_amount*100000,{ currency: true }) %>_)
+  along with interest at 14 % p.a with rests as mentioned in the sanction letter dated <%= day %>/<%= month %>/<%= year %> . with ref no <%=data.applicationref %>, to 
+  M/s. <b>Samunnati Financial Intermediation and Services Private Limited.</b> for the loan availed from M/s. Samunnati Financial Intermediation and Services Private Limited.
+ </p>  
+</div>
+
+ <div class="left">
+  x 
+  <br>
+   <br>
+  <p>Signature:   </p>
+
+  <p>Place:  </p> 
+
+  <p>Date :  </p>
+
+ </div>
+ <div class="right">
+  <p style="height:100px;width:100px;border:1px solid"> Revenue Stamp  </p> 
+ <p> (Signature across stamp with Seal)</p>
+ <br>_______________________
+ <p>Name and position of Signatory
+ 
+</p>
+
+  <br><br>
+  <p>Common Seal (if applicable </p>
+  <br><br>
+  <p> Signature  of Authorized Representative </p>
+    _______________________
+  <p>Name and position of Signatory
+   
+</p>
+(Applicable to corporate Borrowers only)
+ </div>
+
+
+
+<br>
+
+</body>
+
+
+
+</html>

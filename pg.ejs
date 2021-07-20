@@ -1,0 +1,200 @@
+<html>
+<head>
+<style>
+
+@media print {
+  footer {page-break-after: always;}
+}
+
+
+.modal-xl {
+    margin-left: auto !important;
+    margin-right: auto !important;
+background-color:blue;
+    
+}
+
+body{
+ 
+  font-size:12px;
+  font-family: Calibri;
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  height:100px;
+  padding-top:30px;
+}
+.left {
+  position: absolute;
+  left: 0px;
+  height:80px;
+  margin-left: 100px;
+}
+
+p{
+font-size:12px;
+}
+
+.header{
+height:120px;
+}
+
+.data{
+text-align:left;
+position:relative;
+}
+
+.footer {
+bottom:0px;
+}
+
+ol{
+font-size:12px;
+}
+li{
+font-size:12px;
+margin: 10px;
+text-align: justify;
+}
+
+td {
+padding:5px;
+}
+</style>
+
+</head>
+<body align="left" style=" margin-top: 20px;  margin-bottom: 10px;  margin-right: 100px;  margin-left: 100px;">
+
+
+
+<div class=" ">
+  <div class="header">
+  <!-- <img src="https://mlslxw0xad5d.i.optimole.com/uSNfBEo-5YLb7mqp/w:auto/h:auto/q:90/https://samunnati.com/wp-content/uploads/2021/05/Samunnati-logo-with-Registered.png" class="left"/> -->
+  <br>
+  <div >
+  </div>
+  </div>
+  
+  </div>
+  
+  <div class="data" style="text-align:left;font-size:12px;margin-top:20px;">
+  
+    *(Stamp as per State Stamp Act)
+  <h2><center><u><i>PERSONAL GUARANTEE</i></u></center> </h2>
+
+ <% 
+ var dt = new Date();
+
+ year = dt.getFullYear() 
+ month = dt.getMonth() + 1
+ monthname = dt.toLocaleString('default', { month: 'short'});
+ day = dt.getDate();
+
+ %>
+
+THIS DEED OF GUARANTEE executed at ___________________________ on this  <b> <%= day %>  day of  <%= monthname %>, <%= year %></b>  by <br>
+<ol>
+<% for (dir of data.directors) { %>
+  <%  if (dir.liability=="1") { %>
+  <li><b><%= dir.full_name %></b> , aged <%= (year - parseInt(dir.dob.substr(4,8))) %>  years, son of <%= dir.father_name %> residing at <%= dir.address %></li> 
+<% } } %>
+</ol>
+<p style="text-align: justify;">
+  (hereinafter referred to as “the Guarantor/s” which expression shall, unless it be repugnant to the subject or context thereof, include his heirs, executors, legal representatives, administrators, attorneys) in favour of M/s. Samunnati Financial Intermediation & Services Pvt. Ltd., a Non-banking Financial Company incorporated under section 45 IA the Companies Act, 1934, registered with the Reserve Bank of India and having its registered office at Baid Hitech park , 129 b , 8th floor, SH 49, next to RTO office, Thiruvanmiyur, Chennai, Tamil Nadu 600041. India (hereinafter referred to as “the NBFC” which expression shall, unless it be repugnant to the subject or context thereof, include its successors and assigns); 
+  </p>
+<br>
+<br>
+<b>WHEREAS</b> 
+<br>
+<br>
+
+<p>A. <b><%= data.company_name %> </b>, a _________________________ Constitution, and having its registered office at <%= data.address %>. 
+  (hereinafter referred to as “The Borrower”) has requested the NBFC to lend an advance for 
+  _____________________ aggregating to INR <%= data.questionnaire.loan_amount %> lakhs, Rupees __________________________________________ 
+  (“Loan”) for the purpose of "<%= data.questionnaire.loan_purpose %>"
+</p>
+<p>B. The NBFC has agreed in principle to lend and advance to the Borrower the said Loan on the terms and conditions contained in the 
+  sanction letter No. <b> SF_IPL_<%= data.company_pan %> </b> dated <%= day %> / <%= month %> / <%= year %> (hereinafter referred to as sanction letter) entered into between the Borrower and the NBFC. 
+</p> 
+<p>C. One of the terms on which the said Loan was agreed to be granted by the NBFC to the 
+  Borrower was that the said Loan would, interalia, be secured by an unconditional and
+  irrevocable personal guarantee of the Guarantor(s), being these presents. 
+</p>
+<br> 
+<br>NOW THIS DEED WITNESSETH AS FOLLOWS: - 
+<br>In consideration of the premises, the Guarantor/s hereby unconditionally, absolutely and irrevocably guarantee to and agree with the 
+    NBFC as follows: 
+ 
+
+<ol>
+<li>The NBFC shall have the sole discretion (i) to make disbursement(s) and / or interim disbursement(s) out of the Loan; and/or (ii) to lend and advance to the Borrower, the said Loan at such time, on such conditions and in such manner as the NBFC may decide. </li>
+<li>The Borrower shall duly and punctually repay the said Loan together with all interest, liquidated damages, premium on prepayment or on redemption, costs, expenses and other monies in accordance with the Loan Agreement(s) and perform and comply with all the other terms, conditions and covenants contained in the said Loan Agreement(s)</li>
+<li>In the event of any default on the part of the Borrower in payment / repayment or any of the monies referred to above, or in the event of any default on the part of the Borrower to comply with or perform any of the terms, conditions and covenants contained in the Loan Agreement, the Guarantor/s do hereby unconditionally and irrevocably undertake to pay the NBFC forthwith on demand without protest or demur and without proof or condition, pay to the NBFC all the amounts payable by the Borrower under the Loan Agreement.  The Guarantor/s shall pay interest at the rate of <b>14% </b> per annum. (applicable rate of interest to the advances made) on the amounts so demanded from them in the event of any delay in their making the payment to the NBFC in terms of the notice of demand issued in this behalf by the NBFC.</li>
+<li>The Guarantor/s further agrees to bear and pay all present and future stamp, registration and similar taxes or charges which may be payable in connection with the acceptance, delivery, performance or enforcement of the Agreements and/or any Facility Documents as listed in this Sanction letter. The Borrower agrees to indemnify and keep Samunnati indemnified at all times against any and all loss, costs, charges, expenses and liabilities including penalties with respect to or resulting from delay or omissions to pay any such stamp, registration and similar taxes or charges. Such stamp, registration and similar taxes or charges (if not paid or reimbursed by the Borrower) shall be deemed to be the amounts due under/in relation to the Facilities. </li>
+<li>The Guarantor/s shall also indemnify and keep the NBFC indemnified against all losses, damages, costs, claims and expenses whatsoever which the NBFC may suffer, pay or incur by reason of or in connection with any such default on the part of the Borrower including legal proceedings taken against the Borrower and/or the Guarantor/s for recovery of the monies referred to in Clause 2 above. </li>
+<li>The Guarantor/s hereby agrees that without the concurrence of the Guarantor/s, the Borrower and the NBFC shall be at liberty to vary, alter or modify the terms and conditions of the Loan Agreement and of the security documents executed by the Borrower in favour of the NBFC and in particular to defer, postpone or revise the repayment of the Loan and/or payment of interest and other monies payable by the Borrower to the NBFC on the such terms and conditions as may be considered necessary by the NBFC including any increase in the rate of interest.  The NBFC shall also be at liberty to absolutely dispense with or release all or any of the security / securities furnished or required to be furnished by the Borrower to the NBFC to secure the said Loan.  The Guarantor/s agree that the liability under this Guarantee shall in no manner be affected by any such variations, alterations, modifications, waiver, dispensation with or release of security, and that no further consent of the Guarantor/s is required for giving effect to any such variation, alteration, modification, waiver, dispensation with, or release of security. </li>
+<li>The NBFC shall have full liberty, without notice to the Guarantor/s and without in any way affecting this Guarantee, to exercise at any time and in any manner any power or powers reserved to the NBFC under the Loan Agreement to enforce or forbear to enforce payment of the Loan or any part thereof or interest or other monies due to the NBFC from the Borrower or any of the remedies or securities available to the NBFC, to enter into any composition or compound with or to grant time or any other indulgence or facility to the Borrower AND the Guarantor/s shall not be released by the exercise by the NBFC of their liberty in regard to the matters referred to above or by any act or omission on the part of the NBFC or by any other matter or thing whatsoever which under the law relating to sureties would but for this provision have the effect of so releasing the Guarantor/s AND the Guarantor/s hereby waive in favour of the NBFC so far as may be necessary to give effect to any of the provisions of this Guarantee, all the suretyship and other rights which the Guarantor might otherwise be entitled to enforce. </li>
+<li>This Guarantee shall be enforceable against the Guarantor/s jointly and severally notwithstanding that any security or securities comprised in any instrument(s) executed or to be executed by the Borrower in favour of the NBFC shall, at the time when the proceedings are taken against the Guarantor/s under the Guarantee by outstanding or unrealised or lost. </li>
+<li>The Guarantor/s hereby agree and give consent to the sale, mortgage on prior, pari-passu or first charge basis, release etc., of any of the assets by the Borrower from time to time as may be approved by the NBFC or the transfer of any of the assets of the Borrower from one unit to the other or to the release or lease out by the NBFC any or whole of the assets charged to the NBFC on such terms and conditions as the NBFC may deem fit and this may be treated as a standing and continuing consent for each and every individual act of transfer, mortgage, release or lease of any of the assets of the Borrower.  The Guarantor/s hereby declare and agree that no separate consent for each such transfer, mortgage, release or lease of any of such assets would be necessary in future. </li>
+<li>The Guarantor/s hereby agree and declare that the Borrower will be free to avail of further loan or other facilities from the NBFC or any other financial institution or NBFC in addition to the Loan and / or to secure the same during the subsistence of this Guarantee and in that event the Guarantee herein contained will not be affected or vitiated in any manner whatsoever but will remain in full force and effect and binding on the Guarantor/s. </li>
+<li>The rights of the NBFC against the Guarantor/s shall remain in full force and effect notwithstanding any arrangement which may be reached between the NBFC and the other or others from liability and notwithstanding that any time hereafter the other Guarantor/s may cease for any reason whatsoever to be liable to the NBFC, the NBFC shall be at liberty to require the performance by the Guarantor/s of their obligations hereunder to the same extent in all respects as if the Guarantor/s had at all times been solely liable to perform the said obligations. </li>
+<li>To give effect to this Guarantee, the NBFC may act as though the Guarantor/s were the principal Borrower to the NBFC. </li>
+<li>The Guarantor/s hereby declare and agree that they have not received and shall not, without the prior consent in writing of the NBFC receive any security or commission from the Borrower for giving this Guarantee so long as any monies remain due and payable by the Borrower to the NBFC under the Loan Agreement. </li>
+<li>The Guarantor/s shall not in the event of the insolvency of the Borrower prove in competition with the NBFC in the insolvency proceedings. </li>
+<li>A certificate in writing signed by a duly authorised official of the NBFC shall be conclusive evidence against the Guarantor/s of the amount for the time being due to the NBFC from the Borrower in any action or proceeding brought under this Guarantee against the Guarantor/s. </li>
+<li>This Guarantee shall not be wholly or partially satisfied or exhausted by any payments made to or settled with the NBFC by the Borrower and shall be valid and binding on the Guarantor/s and operative until repayment in full of all monies due to the NBFC under the Loan Agreement and the NBFC issues a certificate in this regard. </li>
+<li>This Guarantee shall be irrevocable and the obligations of the Guarantor/s hereunder shall not be conditional on the receipt of any prior notice by the Guarantor/s or by the Borrower and the demand or notice by the NBFC as provided in Clause 20 hereof shall be sufficient notice to or demand on the Guarantor/s. </li>
+<li>The liability of the Guarantor/s under this Guarantee shall not be affected by :- <br>
+        i.any change in the status of the Borrower by reason if he being declared insolvent; or <br>
+        ii.any change in the constitution of the NBFC.
+</li> 
+<li>This Guarantee shall be a continuing one and shall remain in full force and effect till such time the Borrower repays in full the said Loan together with all interest, premium on prepayment or on redemption, costs, expenses and other monies that may from time to time become due and payable and remain unpaid to the NBFC under the Loan Agreement. </li>
+<li>The liability of the Guarantor/s hereunder shall not exceed the sum of Rs.5,00,000/- (Rupees Five Lakhs Only) plus all interest, premium on prepayment or on redemption, costs, expenses and other monies payable by the Borrower to the NBFC under the Loan Agreement.  Should there be any excess drawings of the said loan by the Borrower over and above the initial limit sanctioned to the Borrower, for any reason whatsoever, the Guarantor/s shall be liable for the entire amount outstanding and the Guarantor expressly waive notice of such excess drawal. </li>
+<li>Any demand for payment or notice under this Guarantee shall be sufficiently given if sent by post to or left at the last known address of the Guarantor/s or their heirs or executors or administrators as the case may be, and such demand or notice so made or given, and shall be assumed to have reached the addresses in the case of post, if given by post, and no period of limitation shall commence to run in favour of the Guarantor/s until after demand for payment in writing shall have been made or given as aforesaid and in proving such notice when sent by post it shall be sufficiently proved that the envelope containing the notice was posted and a certificate by any of the responsible officer of the NBFC that to the best of his knowledge and belief, the envelope containing the said notice was so posted, shall be conclusive as against the Guarantor, even though it was returned unserved on account of refusal of the Guarantor/s or otherwise.  </li>
+<li>The liability of the Guarantor/s hereunder shall not be affected by any dispute between the Borrower and the NBFC raised or pending before the Court, Tribunal or Arbitrator(s) and the Guarantor/s shall remain liable under these presents notwithstanding any orders passed therein. </li>
+<li>The Guarantor/s hereby agree and declare that the rights and powers conferred on the NBFC by these presents may be exercised against him/her/them jointly and/or severally at the discretion of the NBFC. </li>
+<li>The Competent Court at Chennai alone shall have exclusive jurisdiction over any matter arising out of these presents or in connection herewith. </li>
+</ol>
+
+<footer class="footer"></footer>
+
+<b>IN WITNESS WHEREOF THE GUARANTOR/S HAS HEREUNTO SET HIS HANDS ON THE DAY, MONTH AND YEAR FIRST HEREINABOVE WRITTEN. 
+  <br>
+  <br>
+  SIGNED AND DELIVERED by the within named  </b>
+
+<div style="align:left">
+  <br>
+  <br><u>Signatures / Names of the Guarantors </u>
+  <br>
+  <br>
+  <% 
+  var i=0
+  for (dir of data.directors) { %>
+    <%  if (dir.liability=="1") { i=i+1 ;%>
+    <br>
+    <br>
+    <span><h4><%=i%> __________________________________________  <%= dir.full_name %> </h4></span>
+    <% } %>
+  
+  <% } %>
+  Place:                                                                                                                                
+  <br>Date: 
+
+
+  <br>
+</div> 
+
+
+  </div>
+
+
+
+
+</body>
+
+
+
+</html>

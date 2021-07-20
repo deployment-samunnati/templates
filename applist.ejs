@@ -1,0 +1,50 @@
+<html>
+<head>
+
+
+</head>
+
+<body style="margin:100px">
+<table style="border-collapse: collapse;border:1px solid grey;padding:10px">
+<tr>
+    <th>Name</th>
+    <th>Applicationid</td>
+    
+    <th>ApplicationID</th>
+		<th>Admin Approve</th>
+    <th>Cad Approve</th>
+    <th>Decline</th>
+    <th>Process</th>
+    <th>Hold</th>
+</tr>
+
+<% for (row of datarecs) { %>
+<tr style="padding:10px">
+    <td  style="padding:10px"><%= row.company_name %></td>
+    <td  style="padding:10px"><%= row.jobid %></td>
+    <td  style="padding:10px"><%= row.applicationref %></td>
+		<td  style="padding:10px"><form method="post" action="/application/approveByAdmin"><input type="hidden" name="applicationid" value="<%= row.jobid %>"><br><button type="submit">Admin Approved</button></form></td>
+    <td  style="padding:10px"><form method="post" action="/application/approve"><input type="hidden" name="applicationid" value="<%= row.jobid %>"><br><button type="submit">Cad Approved</button></form></td>
+    <td  style="padding:10px"><form method="post" action="/application/decline"><input type="hidden" name="applicationid" value="<%= row.jobid %>"><br><button type="submit">Decline</button></form></td>
+    <td  style="padding:10px"><form method="post" action="/application/process"><input type="hidden" name="applicationid" value="<%= row.jobid %>"><br><button type="submit">Process</button></form></td>
+    <td  style="padding:10px"><form method="post" action="/application/onhold"><input type="hidden" name="applicationid" value="<%= row.jobid %>"><br><button type="submit">Hold</button></form></td>
+</tr>
+<% if (!row.presanction_documents || row.presanction_documents.length==0) { 
+   }
+  else { %>
+
+<tr style="padding:10px;border-bottom: 1px black;">
+   <td>&nbsp</td>
+   <% for (i=0;i<row.presanction_documents.length;i++) { %>
+
+  <td style="padding:10px;" >
+    <%= row.presanction_documents[i].filename %> <br><a href="<%= row.presanction_documents[i].url %>" target="_blank">View</a>
+  </td>
+  <% } %>
+</tr>
+
+<% } %>
+<% } %>
+</table> 
+
+</body>
